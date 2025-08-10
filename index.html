@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicago Solar Eligibility Check</title>
+  <style>
+    :root { --accent:#13c27a; --dark:#0f172a; --muted:#f1f5f9; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0f172a;background:#ffffff}
+    header{position:relative;display:flex;align-items:center;justify-content:center;min-height:70vh;padding:40px 20px;background:#0f172a;color:white;text-align:center}
+    header .wrap{max-width:1100px;width:100%}
+    header h1{font-size:clamp(28px,4vw,44px);margin:0 0 14px;line-height:1.15}
+    header p{font-size:clamp(16px,2.2vw,20px);opacity:.95;margin:0 0 24px}
+    .cta{display:inline-block;background:var(--accent);color:#000;padding:14px 22px;border-radius:10px;font-weight:700;text-decoration:none}
+    main{max-width:1100px;margin:0 auto;padding:40px 20px}
+    section{margin:40px 0}
+    h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:900px){ .grid{grid-template-columns:1.2fr .8fr} }
+    .card{background:var(--muted);padding:20px;border-radius:14px}
+    ul{margin:0 0 12px 18px}
+    footer{background:#0b1220;color:#cbd5e1;text-align:center;padding:24px;font-size:14px}
+    .note{font-size:14px;color:#475569}
+    .disclaimer{font-size:13px;color:#475569;margin-top:12px}
+    .pill{display:inline-block;background:#e2e8f0;padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
+    .hero-img{max-width:780px;width:100%;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.35);margin:18px auto 0}
+    .small{font-size:13px;color:#475569}
+    input,select,textarea{width:100%;padding:12px 14px;margin:8px 0 14px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:white}
+    button{background:var(--accent);border:none;color:#0b0b0b;padding:14px 18px;border-radius:10px;font-weight:700;cursor:pointer}
+    .steps{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:800px){ .steps{grid-template-columns:repeat(3,1fr)} }
+    .step{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+    .tag{font-size:12px;color:#475569;margin-bottom:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Is Your Power Bill This High?</h1>
+      <p>Find out if your Chicago home qualifies for up to 30% in federal solar tax credits. A licensed solar professional will visit your home, answer your questions, and inspect your electrical meter — free of charge.</p>
+      <a class="cta" href="#form">Check My Eligibility</a>
+      <img class="hero-img" src="electric_bill_blurred.jpeg" alt="Chicago electric bill showing high charges"/>
+      <div class="small">Serving Chicago & surrounding suburbs</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div>
+        <h2>Why Act Now</h2>
+        <div class="pill">30% Federal Tax Credit</div>
+        <div class="pill">Rising Electricity Costs</div>
+        <div class="pill">Limited Utility Approvals</div>
+        <p class="note">We start with an online check, then confirm everything in person. The in‑home visit ensures your electrical meter and panel meet utility requirements before you spend a dime.</p>
+      </div>
+      <div class="card">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="tag">Step 1</div>
+            Submit your info and (optional) photo of your latest bill.
+          </div>
+          <div class="step">
+            <div class="tag">Step 2</div>
+            We run a free solar qualification check for your address.
+          </div>
+          <div class="step">
+            <div class="tag">Step 3</div>
+            A solar professional visits your home, answers questions, and inspects your electrical meter.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <h2>Get Your Free Solar Eligibility Report + In‑Home Visit</h2>
+      <form id="leadForm" method="post" enctype="multipart/form-data">
+        <input type="text" name="full_name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="text" name="street" placeholder="Street Address" required />
+        <div style="display:flex;gap:12px">
+          <input style="flex:1" type="text" name="city" placeholder="City" required />
+          <input style="flex:1" type="text" name="state" placeholder="State" value="IL" required />
+          <input style="flex:1" type="text" name="zip" placeholder="ZIP" required />
+        </div>
+        <input type="number" step="1" name="bill_amount" placeholder="Monthly Electric Bill ($)" />
+        <input type="url" name="bill_upload_link" placeholder="Link to Bill (Drive/Photos) — optional" />
+        <label class="small">
+          <input type="checkbox" name="consent" required /> I agree to be contacted by a solar professional to confirm my eligibility.
+        </label>
+        <button type="submit">See If I Qualify →</button>
+        <div class="disclaimer">
+          <em>Important: Final approval for installing solar panels and claiming tax credits is determined by your electrical utility company. Our report verifies if your home is a good candidate and is completed after the in‑home visit.</em>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2>What’s Included in Your Report</h2>
+      <ul>
+        <li>Roof & sunlight suitability</li>
+        <li>Estimated bill reduction & payback window</li>
+        <li>Federal, state & local incentives summary</li>
+        <li>Utility approval requirements and next steps</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Chicago Energy Savings Report — Informational Service Only
+  </footer>
+
+  <script>
+    // ===== Replace the URL below with your Zapier Webhook =====
+    const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXXXX";
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Enrich with timestamp + simple UTM read
+      data.timestamp = new Date().toISOString();
+      const params = new URLSearchParams(window.location.search);
+      data.utm_source = params.get('utm_source') || '';
+      data.utm_campaign = params.get('utm_campaign') || '';
+
+      try {
+        const res = await fetch(ZAPIER_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          alert("Thanks! We’ll text or email you shortly to schedule your in‑home visit.");
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again or call/text us.");
+        }
+      } catch (err) {
+        alert("Network error. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
